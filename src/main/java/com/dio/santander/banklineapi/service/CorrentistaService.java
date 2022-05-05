@@ -4,7 +4,6 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import com.dio.santander.banklineapi.dto.NovoCorrentista;
 import com.dio.santander.banklineapi.model.Conta;

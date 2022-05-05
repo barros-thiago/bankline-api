@@ -26,9 +26,9 @@ public class MovimentacaoService {
 		double valor = novaMovimentacao.getTipo() == MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() : novaMovimentacao.getValor() * -1;
 		
 		movimentacao.setDataHora(LocalDateTime.now());
-		movimentacao.setDescricao(movimentacao.getDescricao());
-		movimentacao.setIdConta(movimentacao.getIdConta());
-		movimentacao.setTipo(movimentacao.getTipo());
+		movimentacao.setDescricao(novaMovimentacao.getDescricao());
+		movimentacao.setIdConta(novaMovimentacao.getIdConta());
+		movimentacao.setTipo(novaMovimentacao.getTipo());
 		movimentacao.setValor(valor);
 	
 		Correntista correntista = correntistaRepository.findById(novaMovimentacao.getIdConta()).orElse(null);
